@@ -7,7 +7,9 @@
                const hora = document.getElementById("hora").value;
                const servico = document.querySelector('input[name="servico"]:checked');
 
-               const telefoneRegex = /^\(\d{2}\) \d{5}-\d{4}$/;
+               const telefoneRegex = /^\d{11}$/;
+
+  
 
                if (nome === "") {
                   alert("Por favor, preencha o nome.");
