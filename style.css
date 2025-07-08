@@ -143,7 +143,7 @@ p {
 /* Hero Section */
 .hero {
     background-image: linear-gradient(rgba(128, 0, 0, 0.288), rgba(128, 0, 0, 0.288)), url('./img/bar.avif');
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
