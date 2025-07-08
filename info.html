@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INFORMAÇÕES</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: maroon;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #333;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .info-section {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav a {
+        padding: 10px;
+      }
+    }
+
+    button{
+        width: 200px;
+        color: rgb(128, 0, 0);
+        height: 50px;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.808);
+        
+    }
+    button:hover{
+        background-color: maroon;
+        color: black;
+    } 
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Barbearia MS</h1>
+    <p>Estilo, tradição e cuidado</p>
+  </header>
+
+  <nav>
+    <a href="#horarios">Horários</a>
+    <a href="#valores">Valores</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <main>
+    <section id="horarios" class="info-section">
+      <h2>Horários de Funcionamento</h2>
+      <ul>
+        <li>Segunda a Sexta: 9h às 18h</li>
+        <li>Sábado: 9h às 18h</li>
+        <li>Domingo: Fechado</li>
+      </ul>
+    </section>
+
+    <section id="valores" class="info-section">
+      <h2>Serviços e Valores</h2>
+      <ul>
+        <li>Corte Navalhado: R$ 25,00</li>
+        <li>Sobrancelha: R$ 10,00</li>
+        <li>Combo Navalhado + Sobrancelha: R$ 30,00</li>
+        <li>Corte simples: R$ 20,00</li>
+      </ul>
+    </section>
+
+    <section id="contato" class="info-section">
+      <h2>Contato</h2>
+      <ul>
+        <li>WhatsApp: (71) 992156797</li>
+        <li>Instagram: @matedll55</li>
+        <li>Endereço: Rua do jacaré, 24b - Areias</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <a href="agendar.html"><button>AGENDAMENTO</button></a>
+  </footer>
+
+</body>
+</html>

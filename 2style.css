@@ -1,0 +1,35 @@
+
+
+.fts{
+    gap: 30px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 2px;
+
+}
+img{
+    border-radius: 10px;
+    border:2px solid maroon;
+    width: 50%;
+    height: 50%;
+}
+.principal{
+    border: 0px solid;
+    width: 250px;
+    height: 250px;
+    max-width: 650px;
+    padding: 20px;
+    margin: auto;
+    border-radius: 8px;
+    justify-content: center;
+    display: flex;
+
+
+    
+}

@@ -1,0 +1,95 @@
+button{
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    display: inline-block;
+    text-decoration: none;
+    white-space: 200px;
+    border-radius: 4px;
+    height: 40px;
+    width: 100px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    border: 20px;
+    font-size: 0,5px;
+    background-color: white;
+    color: rgb(155, 3, 3);
+
+}
+button:hover{
+    background-color: black;
+    color: whitesmoke;
+}
+h1{
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(241, 236, 234);
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  margin-bottom: 10px;
+
+}
+p{
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 00px;
+}
+.meio{
+    flex-direction: column-reverse;
+}
+.fomulario{
+    max-width: 500px;
+    background-color: white;
+    padding: 20px;
+    margin: auto;
+    border-radius: 8px;
+    
+
+}
+.meio{
+    background-color: rgba(255, 255, 255, 0.219);
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    height: 20px;
+    flex-direction: row;
+    gap: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+}
+a{
+    color: white;
+}
+
+.social-icons {
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      margin-top: -130px;
+    }
+
+    .social-icons a img {
+      width: 32px;
+      height: 32px;
+      transition: transform 0.2s ease;
+      background-color: white;
+      border-radius: 30%;
+      padding: 6px;
+      box-shadow: 0 0 5px(0,0,0,0,1);
+    }
+
+    .social-icons a img:hover {
+      transform: scale(1.2);
+    }

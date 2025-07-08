@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>agendamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <style>
+             body{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #f2f2f2;
+                padding: 20px;
+             }
+             form{
+                max-width: 650px;
+                background-color: white;
+                padding: 20px;
+                margin: auto;
+                border-radius: 8px;
+                box-shadow: 0 0 2px;
+             }
+             h2{
+                text-align: center;
+                margin-bottom: 20px;
+                color: maroon;
+             }
+             label{
+                display: block;
+                margin-top: 10px;
+                
+             }
+             textarea{
+                width: 96%;
+                padding: 10px;
+                border: 1px solid maroon;
+                border-radius: 5px;
+                min-height: 100px;
+             }
+             button{
+                margin-top: 20px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                background-color: rgba(196, 16, 16, 0.966);
+                color: black;
+                padding: 12px 20px;
+                border: none;
+                width: 100%;
+
+             }
+             button :hover{
+                background-color:black ;
+                color: white;
+             }
+             label{
+                color: maroon;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+             }
+        </style>
+    <section class="agendar.html">
+    </section> 
+    <main>
+
+            <form id="agendar.html">
+
+             <header>
+               <h2>o tratamento ideal começa agora!</h2>
+             </header>
+
+             <label for="NOME">NOME E SOBRENOME</label><br>
+             <input type="text" id="nome" name="nome" placeholder="digite seu nome"><br><br>
+
+             <label for="telefone">TELEFONE/WHATSAPP:</label><br>
+             <input type="tel" name="telefone" id="telefone" placeholder="EX: (71) 97070-1234"><br><br>
+
+             <label for="data">DATA</label><br>
+             <input type="date" name="data" id="data"><br><br>
+
+             <label for="hora">HORÁRIO DESEJADO</label><br>
+             <input type="time" name="hora" id="hora"> <br><br>
+            
+             <label>SERVIÇOS DESEJADOS:</label>
+              <div class="desejos" id="DESEJADOS">
+                 <label><input type="radio" name="servico" value="corte"> Corte simples</label><br>
+                 <label><input type="radio" name="servico" value="barba"> corte navalhado</label><br>
+                 <label><input type="radio" name="servico" value="sobrancelha"> Sobrancelha</label><br>
+                 <label><input type="radio" name="servico" value="combo"> Combo (Corte + sobrancelha)</label><br>
+                 <label><input type="radio" name="servico" value="outro"> acabamento</label><br>
+                 <label><input type="radio" name="servico" value="outro"> Outro</label><br><br>
+                 <textarea name="observação" id="observação" placeholder="observação..."></textarea>
+               </div>
+               <footer>
+                  <button type="submit">ENVIAR</button>
+               <footer>   
+            </form> 
+            <script src="script.js"></script>       
+</body>
+</html>
+
+
+
+
+
+
+
