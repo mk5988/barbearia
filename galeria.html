@@ -1,44 +1,94 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - Barbearia MS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="2style.css">
-    <title>galeria</title>
-    <style>
-        
-            
-            
-            
-         
-    </style>
-
 </head>
 <body>
-    <header>
-        <ul>
-          <i class="fa-solid fa-image">GALERIA</i>
-        </ul>
-        <img class="principal" src="fta.jpg" alt="barbeiro">
-    </header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Barbearia MS</a>
+            <ul class="nav-menu">
+                <li><a href="sobre.html" class="nav-link">SOBRE</a></li>
+                <li><a href="galeria.html" class="nav-link">GALERIA</a></li>
+                <li><a href="info.html" class="nav-link">INFORMAÇÕES</a></li>
+                <li><a href="agendar.html" class="nav-link">AGENDAR</a></li>
+            </ul>
+            <button class="nav-toggle">
+                <span>☰</span>
+            </button>
+        </div>
+    </nav>
 
-    <main class="fts">
-        <img src="hh.webp" alt="">
-        <img src="images (1).jpg" alt="">
-        <img src="images (2).jpg" alt="">
-        <img src="images.jpg" alt="">
-        <img src="lk.jpg" alt="">
-        <img src="ml.jpg" alt="">
-        <img src="unnamed.png" alt="">
-        
-    </main>
+    <!-- Gallery Header -->
+    <div class="container">
+        <div class="gallery-header">
+            <h1><i class="fa-solid fa-image"></i> GALERIA</h1>
+            <p>Confira alguns dos nossos trabalhos e transformações</p>
+        </div>
 
-    <footer>
-        <a href="info.html"><button>Informações</button></a>
-        <a href="agendar.html"><button>Agendamento</button></a>
+        <!-- Featured Image -->
+        <div class="gallery-hero">
+            <img src="./img/fta.jpg" alt="Barbeiro em ação - Destaque" class="gallery-featured">
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+            <img src="./img/hh.webp" alt="Corte masculino 1" class="gallery-item">
+            <img src="./img/images (1).jpg" alt="Corte masculino 2" class="gallery-item">
+            <img src="./img/images (2).jpg" alt="Corte masculino 3" class="gallery-item">
+            <img src="./img/images.jpg" alt="Corte masculino 4" class="gallery-item">
+            <img src="./img/lk.jpg" alt="Corte masculino 5" class="gallery-item">
+            <img src="./img/ml.jpg" alt="Corte masculino 6" class="gallery-item">
+            <img src="./img/unnamed.png" alt="Corte masculino 7" class="gallery-item">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-buttons">
+                <a href="info.html" class="footer-btn">INFORMAÇÕES</a>
+                <a href="agendar.html" class="footer-btn">AGENDAMENTO</a>
+            </div>
+            <p>&copy; 2025 Barbearia MS. Todos os direitos reservados.</p>
+        </div>
     </footer>
-    
-    
+
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Gallery Image Modal (opcional)
+        document.querySelectorAll('.gallery-item').forEach(img => {
+            img.addEventListener('click', () => {
+                // Aqui você pode adicionar um modal para visualizar a imagem em tamanho maior
+                // Por enquanto, apenas um efeito visual
+                img.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    img.style.transform = 'scale(1)';
+                }, 200);
+            });
+        });
+    </script>
 </body>
 </html>

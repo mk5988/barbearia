@@ -1,105 +1,167 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>agendamento</title>
+    <title>Agendamento - Barbearia MS</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-        <style>
-             body{
-                font-family: Arial, Helvetica, sans-serif;
-                background-color: #f2f2f2;
-                padding: 20px;
-             }
-             form{
-                max-width: 650px;
-                background-color: white;
-                padding: 20px;
-                margin: auto;
-                border-radius: 8px;
-                box-shadow: 0 0 2px;
-             }
-             h2{
-                text-align: center;
-                margin-bottom: 20px;
-                color: maroon;
-             }
-             label{
-                display: block;
-                margin-top: 10px;
-                
-             }
-             textarea{
-                width: 96%;
-                padding: 10px;
-                border: 1px solid maroon;
-                border-radius: 5px;
-                min-height: 100px;
-             }
-             button{
-                margin-top: 20px;
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                background-color: rgba(196, 16, 16, 0.966);
-                color: black;
-                padding: 12px 20px;
-                border: none;
-                width: 100%;
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Barbearia MS</a>
+            <ul class="nav-menu">
+                <li><a href="sobre.html" class="nav-link">SOBRE</a></li>
+                <li><a href="galeria.html" class="nav-link">GALERIA</a></li>
+                <li><a href="info.html" class="nav-link">INFORMAÇÕES</a></li>
+                <li><a href="agendar.html" class="nav-link">AGENDAR</a></li>
+            </ul>
+            <button class="nav-toggle">
+                <span>☰</span>
+            </button>
+        </div>
+    </nav>
 
-             }
-             button :hover{
-                background-color:black ;
-                color: white;
-             }
-             label{
-                color: maroon;
-                font-family: Georgia, 'Times New Roman', Times, serif;
-             }
-        </style>
-    <section class="agendar.html">
-    </section> 
-    <main>
-
-            <form id="agendar.html">
-
-             <header>
-               <h2>o tratamento ideal começa agora!</h2>
-             </header>
-
-             <label for="NOME">NOME E SOBRENOME</label><br>
-             <input type="text" id="nome" name="nome" placeholder="digite seu nome"><br><br>
-
-             <label for="telefone">TELEFONE/WHATSAPP:</label><br>
-             <input type="tel" name="telefone" id="telefone" placeholder="EX: (71) 97070-1234"><br><br>
-
-             <label for="data">DATA</label><br>
-             <input type="date" name="data" id="data"><br><br>
-
-             <label for="hora">HORÁRIO DESEJADO</label><br>
-             <input type="time" name="hora" id="hora"> <br><br>
+    <!-- Main Content -->
+    <main class="container">
+        <div class="form-container">
+            <h2>O tratamento ideal começa agora!</h2>
             
-             <label>SERVIÇOS DESEJADOS:</label>
-              <div class="desejos" id="DESEJADOS">
-                 <label><input type="radio" name="servico" value="corte"> Corte simples</label><br>
-                 <label><input type="radio" name="servico" value="barba"> corte navalhado</label><br>
-                 <label><input type="radio" name="servico" value="sobrancelha"> Sobrancelha</label><br>
-                 <label><input type="radio" name="servico" value="combo"> Combo (Corte + sobrancelha)</label><br>
-                 <label><input type="radio" name="servico" value="outro"> acabamento</label><br>
-                 <label><input type="radio" name="servico" value="outro"> Outro</label><br><br>
-                 <textarea name="observação" id="observação" placeholder="observação..."></textarea>
-               </div>
-               <footer>
-                  <button type="submit">ENVIAR</button>
-               <footer>   
-            </form> 
-            <script src="script.js"></script>       
+            <form id="agendamento-form">
+                <div class="form-group">
+                    <label for="nome">NOME E SOBRENOME</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">TELEFONE/WHATSAPP</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="EX: (71) 97070-1234" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="data">DATA</label>
+                    <input type="date" id="data" name="data" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="hora">HORÁRIO DESEJADO</label>
+                    <input type="time" id="hora" name="hora" required>
+                </div>
+
+                <div class="form-group">
+                    <label>SERVIÇOS DESEJADOS:</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="corte-simples" name="servico" value="corte-simples" required>
+                            <label for="corte-simples">Corte Simples - R$ 20,00</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="corte-navalhado" name="servico" value="corte-navalhado" required>
+                            <label for="corte-navalhado">Corte Navalhado - R$ 25,00</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="sobrancelha" name="servico" value="sobrancelha" required>
+                            <label for="sobrancelha">Sobrancelha - R$ 10,00</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="combo" name="servico" value="combo" required>
+                            <label for="combo">Combo (Navalhado + Sobrancelha) - R$ 30,00</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="acabamento" name="servico" value="acabamento" required>
+                            <label for="acabamento">Acabamento</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="outro" name="servico" value="outro" required>
+                            <label for="outro">Outro</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="observacao">OBSERVAÇÕES</label>
+                    <textarea id="observacao" name="observacao" placeholder="Observações adicionais..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-full">ENVIAR AGENDAMENTO</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-buttons">
+                <a href="info.html" class="footer-btn">VER INFORMAÇÕES</a>
+                <a href="sobre.html" class="footer-btn">SOBRE NÓS</a>
+            </div>
+            <p>&copy; 2025 Barbearia MS. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Form Submission
+        document.getElementById('agendamento-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const nome = formData.get('nome');
+            const telefone = formData.get('telefone');
+            const data = formData.get('data');
+            const hora = formData.get('hora');
+            const servico = formData.get('servico');
+            const observacao = formData.get('observacao');
+
+            // Format date
+            const dataFormatada = new Date(data).toLocaleDateString('pt-BR');
+            
+            // Create WhatsApp message
+            let mensagem = `Olá! Gostaria de agendar um horário:\n\n`;
+            mensagem += `👤 *Nome:* ${nome}\n`;
+            mensagem += `📱 *Telefone:* ${telefone}\n`;
+            mensagem += `📅 *Data:* ${dataFormatada}\n`;
+            mensagem += `⏰ *Horário:* ${hora}\n`;
+            mensagem += `✂️ *Serviço:* ${servico}\n`;
+            
+            if (observacao) {
+                mensagem += `📝 *Observações:* ${observacao}\n`;
+            }
+
+            // Encode message for URL
+            const mensagemCodificada = encodeURIComponent(mensagem);
+            
+            // WhatsApp URL
+            const whatsappUrl = `https://wa.me/5571992156797?text=${mensagemCodificada}`;
+            
+            // Open WhatsApp
+            window.open(whatsappUrl, '_blank');
+            
+            // Show success message
+            alert('Redirecionando para o WhatsApp para confirmar seu agendamento!');
+        });
+
+        // Set minimum date to today
+        document.getElementById('data').min = new Date().toISOString().split('T')[0];
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-

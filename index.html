@@ -1,60 +1,73 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>barbeariaMS</title>
+    <title>Barbearia MS - Estilo, Tradição e Cuidado</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <style>
-        body{
-            background-image: url('bar.avif');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-    
-
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="meio">
-        <a href="sobre.html">SOBRE</a>
-        <a href="galeria.html">GALERIA</a>
-        <a href="info.html">INFORMAÇÕES</a>
-    </header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Barbearia MS</a>
+            <ul class="nav-menu">
+                <li><a href="sobre.html" class="nav-link">SOBRE</a></li>
+                <li><a href="galeria.html" class="nav-link">GALERIA</a></li>
+                <li><a href="info.html" class="nav-link">INFORMAÇÕES</a></li>
+                <li><a href="agendar.html" class="nav-link">AGENDAR</a></li>
+            </ul>
+            <button class="nav-toggle">
+                <span>☰</span>
+            </button>
+        </div>
+    </nav>
 
-    <main>
-        <div class="inicio">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
             <h1>NÃO PERCA TEMPO, FAÇA O SEU AGENDAMENTO!</h1>
             <p>O TRATAMENTO IDEAL PARA VOCÊ É AQUI!</p>
-            <a href="agendar.html"class="button"><button>AGENDAR</button></a>
+            <a href="agendar.html" class="btn btn-large">AGENDAR AGORA</a>
         </div>
-    </main>
-    <footer class="endereços">
-     <div class="social-icons">
-    <a href="https://www.instagram.com/matedll55" target="_blank" title="Instagram">
-      <img class="insta" src="instagram.svg" alt="Instagram">
-    </a>
+    </section>
 
-    <a href="https://wa.me/+5571992156797" target="_blank" title="WhatsApp">
-      <img class="what" src="Whatsapp-Alt--Streamline-Unicons.svg" alt="WhatsApp">
-    </a>
-
-    <a href="https://www.google.com/maps/place/Praça+da+Mangueira+-+Camaçari" target="_blank" title="Localização no Google Maps">
-      <img class="loca" src="Pin-Location-1--Streamline-Ultimate.png" alt="Localização">
-    </a>
-  </div>
-
-        
+    <!-- Footer with Social Icons -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/matedll55" target="_blank" title="Instagram">
+                    <img src="./img/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://wa.me/+5571992156797" target="_blank" title="WhatsApp">
+                    <img src="./img/Whatsapp-Alt--Streamline-Unicons.svg" alt="WhatsApp">
+                </a>
+                <a href="https://www.google.com/maps/place/Praça+da+Mangueira+-+Camaçari" target="_blank" title="Localização no Google Maps">
+                    <img src="./img/Pin-Location-1--Streamline-Ultimate.png" alt="Localização">
+                </a>
+            </div>
+            <p>&copy; 2025 Barbearia MS. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
-    
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
 
-    
-</body>    
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

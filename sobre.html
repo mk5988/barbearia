@@ -1,93 +1,90 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sobre</title>
+    <title>Sobre - Barbearia MS</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <style>
-        body{
-        background-color: #f2f2f2; 
-        font-family: Arial, Helvetica, sans-serif;
-        padding: 10px;
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Barbearia MS</a>
+            <ul class="nav-menu">
+                <li><a href="sobre.html" class="nav-link">SOBRE</a></li>
+                <li><a href="galeria.html" class="nav-link">GALERIA</a></li>
+                <li><a href="info.html" class="nav-link">INFORMAÇÕES</a></li>
+                <li><a href="agendar.html" class="nav-link">AGENDAR</a></li>
+            </ul>
+            <button class="nav-toggle">
+                <span>☰</span>
+            </button>
+        </div>
+    </nav>
 
-        }
-        .sobre{
-           max-width: 1000px;
-           background-color:white;
-           padding: 10px;
-           margin: auto;
-           border-radius: 8px;
-    
-  
-        }
+    <!-- Main Content -->
+    <main class="container">
+        <div class="content-wrapper">
+            <div class="about-container">
+                <div class="about-image-container">
+                    <img src="./img/br.jpg" alt="Matheus Santos - Barbeiro" class="about-image">
+                </div>
+                <div class="about-text">
+                    <h3>SOBRE MIM</h3>
+                    <p>
+                        Olá! Sou Matheus Santos de Santana, barbeiro profissional com mais de 1 ano de experiência, 
+                        apaixonado por transformar o visual e elevar a autoestima de cada cliente que passa pela minha cadeira.
+                    </p>
+                    <p>
+                        Desde o início da minha jornada, sempre acreditei que um bom corte vai além da estética, 
+                        é uma experiência completa de cuidado e bem-estar.
+                    </p>
+                    <p>
+                        Especializado no curso Ana Hickman em cortes masculinos clássicos, modernos, fade, 
+                        sobrancelhas e design.
+                    </p>
+                    <p>
+                        Aqui, cada cliente é único. Por isso dedico tempo para entender seu estilo 
+                        e necessidades específicas.
+                    </p>
+                    <p>
+                        <strong>Agende seu horário e venha viver uma nova experiência comigo!</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
 
-        img{
-            background-size:cover ;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            display: flex;
-            margin: auto;
-            top: 40px;
-            right: 230px;
-            display: flex;
-            height: 500px;
-            width: 500px;
-            border: 3px solid maroon;
-            border-radius: 10px;
-            
-            
-        }
-        p{
-            height: 97%;
-            width: auto;
-            margin: auto;
-            color: maroon;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-        button{
-              margin-top: 20px;
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                background-color: rgba(196, 16, 16, 0.966);
-                color: black;
-                padding: 12px 20px;
-                border: none;
-                width: 100%;
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-buttons">
+                <a href="agendar.html" class="footer-btn">AGENDAR HORÁRIO</a>
+                <a href="info.html" class="footer-btn">VER INFORMAÇÕES</a>
+            </div>
+            <p>&copy; 2025 Barbearia MS. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-        }
-        
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
 
-        
-    </style>
-<main>  
-    <div class="sobre">
-        <img src="br.jpg" alt="minha imagem">
-        <h3>SOBRE MIM</h3>
-        <p>
-            Olá! <br> sou  Matheus Santos de Santana, 
-            barbeiro profissional com mais de 1 ano de experiência, 
-            apaixonado por transformar o visual e elevar a autoestima de cada 
-            cliente que passa pela minha cadeira. 
-            Desde o inicio da minha jornada,
-            sempre acreditei que um bom corte 
-            vai além da estética, é uma esperiêcia. <br><br><br>
-            Especializado no  curso Ana Hickman
-            em cortes masculinos clássicos, 
-            modernos, fade, sobrancelhas e 
-            design. <br><br>
-            Aqui, cada cliente é único. por isso <br>
-            dedico tempo para entender seu estilo. <br><br>
-            Agende seu horário e venha viver <br>
-            uma nova experiência comigo! <br>
-            (LÁ ELE)
-        </p> 
-    </div>
-</main>  
-<footer>
-     <a href="agendar.html"><button>AGENDAR</button></a>
-</footer>
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
 
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
